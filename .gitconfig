@@ -1,7 +1,26 @@
 [user]
 	email = contact@thomasice.com
 	name = Tom Ice
+[color]
+    ui = auto
+[submodule]
+    recurse = true
+[init]
+    templatedir = ~/.git_template
+[sendemail]
+    confirm = auto
+    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+    smtpencryption = tls
+    smtpuser = icethomasm@gmail.com
 [alias]
     # Display a pretty graph. Can invoke via "git ll"
     # "git ll -p" will show lines changed, too 
-	ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    co = checkout
+    cob = checkout -b
+    br = branch -a
+    st = status
+    aa = add -A .
+    amend = commit --amend -m
+    pom = push -u origin master
